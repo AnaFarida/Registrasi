@@ -1,2 +1,1 @@
-# E41181974bimabagaskara
-Good Game
+E41181974/Bima Bagaskara
