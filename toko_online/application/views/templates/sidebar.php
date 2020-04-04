@@ -36,17 +36,32 @@
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-tshirt"></i>
-                    <span>Pakaian Anak</span></a>
+                    <span>Peralatan Listrik</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-tshirt"></i>
-                    <span>Pakaian Pria</span></a>
+                    <span>Peralatan Pompa Air</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-tshirt"></i>
-                    <span>Pakaian Wanita</span></a>
+                    <span>Peralatan Kipas angin</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-tshirt"></i>
+                    <span>Peralatan Blender</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-tshirt"></i>
+                    <span>Peralatan Mesin Cuci</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-tshirt"></i>
+                    <span>Peralatan Bor</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
