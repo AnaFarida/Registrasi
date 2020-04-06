@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <button class="btn-sm btn-primary mb-3" data-toggle="modal" data-target="#tambah_barang"><i class="fas fa-plus fa-sm"></i> Tambah Barang</button>
+    <button class="btn-sm btn-primary mb-3" data-toggle="modal" data-target="#tambah_aksi"><i class="fas fa-plus fa-sm"></i> Tambah Barang</button>
     <table class="table table-bordered">
         <tr>
             <th>NO</th>
@@ -8,6 +8,7 @@
             <th>KATEGORI</th>
             <th>HARGA</th>
             <th>STOK</th>
+            <th>GAMBAR</th>
             <th colspan="3">AKSI</th>
         </tr>
 
@@ -21,6 +22,7 @@
                 <td><?php echo $brg->kategori ?></td>
                 <td><?php echo $brg->harga ?></td>
                 <td><?php echo $brg->stok ?></td>
+                <td><?php echo $brg->gambar ?></td>
                 <td>
                     <div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i>
                     </div>
@@ -30,7 +32,7 @@
                     </div>
                 </td>
                 <td>
-                    <div class="btn btn-danger btn-sm"><i class="fa fa-trush"></i>
+                    <div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>
                     </div>
                 </td>
             </tr>
@@ -38,11 +40,13 @@
     </table>
     </>
 
-
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="tambah_barang" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="tambah_aksi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -55,23 +59,23 @@
                     <form action="<?php echo base_url() . 'admin/data_barang/tambah_aksi'; ?>" method="post" enctype="multipart/form-data">
 
                         <div class="form-group">
-                            <label>NAMA BARANG</label>
+                            <label>Nama Barang</label>
                             <input type="text" name="nama_brg" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>kETERANGAN</label>
+                            <label>Keterangan</label>
                             <input type="text" name="keterangan" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>KATEGORI</label>
+                            <label>Kategori</label>
                             <input type="text" name="kategori" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>HARGA</label>
+                            <label>Harga</label>
                             <input type="text" name="harga" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>STOK</label>
+                            <label>Stok</label>
                             <input type="text" name="stok" class="form-control">
                         </div>
                         <div class="form-group">

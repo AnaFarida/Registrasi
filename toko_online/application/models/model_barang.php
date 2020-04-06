@@ -1,4 +1,5 @@
 <?php
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class model_barang extends CI_Model
 {
@@ -8,7 +9,7 @@ class model_barang extends CI_Model
     {
         return $this->db->get('tb_barang');
     }
-    public function tambah_barang($data, $table)
+    public function tambah_aksi($data, $table)
     {
         $this->db->insert($table, $data);
     }

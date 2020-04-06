@@ -18,18 +18,19 @@ class data_barang extends CI_Controller
         $stok = $this->input->post('stok');
         $gambar = $_FILES['gambar']['name'];
 
-        if ($gambar = '') {
-        } else {
-            $config['upload_path'] = '/uploads/';
-            $config['allowed_types'] = 'jpg|jpeg|png|gif';
+        if ($gambar) {
+            $config['allowed_types'] = 'jpg|jpeg|png';
+            $config['upload_path'] = './assets/uploads/';
 
             $this->load->library('upload', $config);
-            if (!$this->upload->do_upload('gambar')) {
-                echo "Gambar Gagal diupload!";
-            } else {
+
+            if ($this->upload->do_upload('gambar')) {
                 $gambar = $this->upload->data('file_name');
+            } else {
+                echo $this->upload->display_errors();
             }
         }
+
         $data = array(
             'nama_brg' => $nama_brg,
             'keterangan' => $keterangan,
@@ -38,6 +39,8 @@ class data_barang extends CI_Controller
             'stok' => $stok,
             'gambar' => $gambar
         );
-        redirect('admin/data_barang/index');
+
+        $this->model_barang->tambah_aksi($data, 'tb_barang');
+        redirect('admin/data_barang');
     }
 }
