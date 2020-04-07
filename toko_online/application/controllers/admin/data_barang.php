@@ -50,7 +50,7 @@ class data_barang extends CI_Controller
         $data['barang'] = $this->model_barang->edit_barang($where, 'tb_barang')->result();
         $this->load->view('templates_admin/header');
         $this->load->view('templates_admin/sidebar');
-        $this->load->view('admin/data_barang', $data);
+        $this->load->view('admin/edit_barang', $data);
         $this->load->view('templates_admin/footer');
     }
 
@@ -77,6 +77,13 @@ class data_barang extends CI_Controller
 
         );
         $this->model_barang->update_data($where, $data, 'tb_barang');
+        redirect('admin/data_barang');
+    }
+
+    public function hapus($id)
+    {
+        $where = array('id_brg' => $id);
+        $this->model_barang->hapus_data($where, 'tb_barang');
         redirect('admin/data_barang');
     }
 }
