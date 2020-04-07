@@ -28,12 +28,12 @@
                     </div>
                 </td>
                 <td>
-                    <div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i>
-                    </div>
+                    <?php echo anchor('admin/data_barang/edit/' . $brg->id_brg, '<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i>
+                    </div>') ?>
                 </td>
                 <td>
-                    <div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>
-                    </div>
+                    <?php echo anchor('admin/data_barang/hapus/' . $brg->id_brg, ' <div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>
+                    </div>') ?>
                 </td>
             </tr>
         <?php endforeach; ?>
