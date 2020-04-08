@@ -83,6 +83,11 @@ class data_barang extends CI_Controller
     public function hapus($id)
     {
         $where = array('id_brg' => $id);
+
+        $gambar = $this->model_barang->edit_barang($where, 'tb_barang')->result_array()[0]['gambar'];
+        $path = './assets/uploads/' . $gambar;
+        unlink($path);
+
         $this->model_barang->hapus_data($where, 'tb_barang');
         redirect('admin/data_barang');
     }
